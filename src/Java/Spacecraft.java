@@ -1,6 +1,6 @@
 package Java;
 
-public abstract class Spacecraft {
+public abstract class Spacecraft implements Rotate {
     protected String type;
     protected Integer power;
     protected Integer speed;

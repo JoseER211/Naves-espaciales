@@ -1,6 +1,6 @@
 package Java;
 
 public interface Rotate {
-    public void turnShip();
+    public void turnSpaceCraft();
 
 }

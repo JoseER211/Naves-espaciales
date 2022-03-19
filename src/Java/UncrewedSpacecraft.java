@@ -17,4 +17,9 @@ public class UncrewedSpacecraft extends Spacecraft {
         this.speed = 0;
         System.out.println("La nave " + type + " frenó" + "\n" + "power: " + power + "\n" + "speed: " + speed + "\n");
     }
+
+    @Override
+    public void turnSpaceCraft() {
+
+    }
 }

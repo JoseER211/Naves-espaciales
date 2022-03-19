@@ -34,7 +34,7 @@ public class Main {
             menuOption = Scan();
             switch (menuOption) {
                 case 1:
-                    launchShips();
+                    launchSpacecrafts();
                     break;
                 case 2:
                     programOff();
@@ -49,7 +49,7 @@ public class Main {
 
     }
 
-    public static void launchShips() {
+    public static void launchSpacecrafts() {
         Integer menuLaunch;
 
         do {
@@ -60,26 +60,28 @@ public class Main {
             menuLaunch = Scan();
             switch (menuLaunch) {
                 case 1:
-                    SpaceShuttle nave1 = new SpaceShuttle();
-                    nave1.startUp();
-                    launchedShip();
+                    SpaceShuttle spaceCraft1 = new SpaceShuttle();
+                    spaceCraft1.startUp();
+                    launchedSpacecraft1();
                     break;
+
                 case 2:
-                    UncrewedSpacecraft nave2 = new UncrewedSpacecraft();
-                    nave2.startUp();
-                    launchedShip();
+                    UncrewedSpacecraft spaceCraft2 = new UncrewedSpacecraft();
+                    spaceCraft2.startUp();
+                    launchedSpacecraft2();
                     break;
+
                 case 3:
-                    CrewedSpacecraft nave3 = new CrewedSpacecraft();
-                    nave3.startUp();
-                    launchedShip();
+                    CrewedSpacecraft spaceCraft3 = new CrewedSpacecraft();
+                    spaceCraft3.startUp();
+                    launchedSpacecraft3();
                     break;
 
                 case 4:
                     programOff();
                     break;
 
-                case 5:
+                default:
                     incorrectOption();
                     break;
             }
@@ -87,13 +89,32 @@ public class Main {
 
     }
 
-    public static void launchedShip(){
+    public static void launchedSpacecraft1(){
+        System.out.println("¿Qué hará la nave?");
+
+        System.out.println("1. Girar" + "\n" + "2. Frenar");
+        Integer menuLaunchShip;
+        menuLaunchShip = Scan();
+        switch (menuLaunchShip){
+            case 1:
+                SpaceShuttle rotateSpaceCraft = new SpaceShuttle();
+                rotateSpaceCraft.turnSpaceCraft();
+
+            case 2:
+                SpaceShuttle stopSpaceCraft = new SpaceShuttle();
+                stopSpaceCraft.endUp();
+                break;
+
+        }
+    }
+
+    public static void launchedSpacecraft2(){
         System.out.println("¿Qué hará la nave?");
         Integer menuLaunchShip;
         menuLaunchShip = Scan();
         switch (menuLaunchShip){
             case 1:
-                SpaceShuttle nave = new SpaceShuttle();
+                UncrewedSpacecraft nave = new UncrewedSpacecraft();
                 nave.endUp();
                 break;
 
@@ -101,7 +122,20 @@ public class Main {
 
 
         }
+    }
+    public static void launchedSpacecraft3(){
+        System.out.println("¿Qué hará la nave?");
+        Integer menuLaunchShip;
+        menuLaunchShip = Scan();
+        switch (menuLaunchShip){
+            case 1:
+                CrewedSpacecraft nave = new CrewedSpacecraft();
+                nave.endUp();
+                break;
+
+            case 2:
 
 
+        }
     }
 }

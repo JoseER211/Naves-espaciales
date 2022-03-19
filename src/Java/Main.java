@@ -48,7 +48,7 @@ public class Main {
         } while (menuOption > 2);
 
     }
-    
+
     public static void launchShips() {
         Integer menuLaunch;
 
@@ -62,15 +62,17 @@ public class Main {
                 case 1:
                     SpaceShuttle nave1 = new SpaceShuttle();
                     nave1.startUp();
+                    launchedShip();
                     break;
                 case 2:
                     UncrewedSpacecraft nave2 = new UncrewedSpacecraft();
                     nave2.startUp();
+                    launchedShip();
                     break;
-
                 case 3:
                     CrewedSpacecraft nave3 = new CrewedSpacecraft();
                     nave3.startUp();
+                    launchedShip();
                     break;
 
                 case 4:
@@ -82,6 +84,24 @@ public class Main {
                     break;
             }
         } while (menuLaunch > 4);
+
+    }
+
+    public static void launchedShip(){
+        System.out.println("¿Qué hará la nave?");
+        Integer menuLaunchShip;
+        menuLaunchShip = Scan();
+        switch (menuLaunchShip){
+            case 1:
+                SpaceShuttle nave = new SpaceShuttle();
+                nave.endUp();
+                break;
+
+            case 2:
+
+
+        }
+
 
     }
 }

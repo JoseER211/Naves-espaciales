@@ -24,7 +24,7 @@ public class Main {
     }
 
     public static void landInEarth() {
-        System.out.println("Aterrizando de nuevo en la tierra");
+        System.out.println("Aterrizando de nuevo en el planeta tierra");
     }
 
     public static void principalMenu() {
@@ -59,7 +59,7 @@ public class Main {
         do {
             System.out.println("\n" + "¿Cuál nave desea lanzar?");
             System.out.println("1. Vehículo lanzadera" + "\n" + "2. Nave no tripulada" + "\n" +
-                    "3. Nave tripulada" + "\n" + "4. Terminar programa");
+                    "3. Nave tripulada" + "\n" + "4. ATV" + "\n" + "5. Terminar programa");
 
             menuLaunch = Scan();
             switch (menuLaunch) {
@@ -82,6 +82,12 @@ public class Main {
                     break;
 
                 case 4:
+                    atvSpacecraft spaceCraft4 = new atvSpacecraft();
+                    spaceCraft4.startUp();
+                    launchedSpacecraft4();
+                    break;
+
+                case 5:
                     programOff();
                     break;
 
@@ -89,7 +95,7 @@ public class Main {
                     incorrectOption();
                     break;
             }
-        } while (menuLaunch > 4);
+        } while (menuLaunch > 5);
 
     }
 
@@ -171,6 +177,35 @@ public class Main {
 
                 case 3:
                     CrewedSpacecraft stopSpaceCraft = new CrewedSpacecraft();
+                    stopSpaceCraft.endUp();
+                    break;
+
+                default:
+                    incorrectOption();
+                    break;
+            }
+        } while (menuLaunchShip > 3);
+    }
+
+    public static void launchedSpacecraft4() {
+        Integer menuLaunchShip;
+        do {
+            System.out.println("\n" + "¿Qué hará la nave?");
+            System.out.println("1. Girar" + "\n" + "2. Aterrizar" + "\n" + "3. Frenar");
+
+            menuLaunchShip = Scan();
+            switch (menuLaunchShip) {
+                case 1:
+                    atvSpacecraft rotateSpaceCraft = new atvSpacecraft();
+                    rotateSpaceCraft.rotateSpaceCraft();
+                    break;
+
+                case 2:
+                    landInEarth();
+                    break;
+
+                case 3:
+                    atvSpacecraft stopSpaceCraft = new atvSpacecraft();
                     stopSpaceCraft.endUp();
                     break;
 

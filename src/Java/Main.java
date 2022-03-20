@@ -1,5 +1,10 @@
 package Java;
 
+import Java.Naves.CrewedSpacecraft;
+import Java.Naves.SpaceShuttle;
+import Java.Naves.UncrewedSpacecraft;
+import Java.Naves.atvSpacecraft;
+
 import java.util.Scanner;
 
 public class Main {

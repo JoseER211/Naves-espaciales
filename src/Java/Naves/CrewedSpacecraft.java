@@ -1,4 +1,6 @@
-package Java;
+package Java.Naves;
+
+import Java.Spacecraft;
 
 import static Java.Main.Scan;
 import static Java.Main.incorrectOption;

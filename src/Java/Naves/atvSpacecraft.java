@@ -1,21 +1,21 @@
-package Java;
+package Java.Naves;
 
 import static Java.Main.Scan;
 import static Java.Main.incorrectOption;
 
-public class UncrewedSpacecraft extends Spacecraft {
+public class atvSpacecraft extends UncrewedSpacecraft {
 
     @Override
     public void startUp() {
-        this.type = "no Tripulada";
-        this.power = 8850;
-        this.speed = 4425;
+        this.type = "ATV";
+        this.power = 8000;
+        this.speed = 4000;
         System.out.println("La nave " + type + " arrancó" + "\n" + "power: " + power + "\n" + "speed: " + speed + "\n");
     }
 
     @Override
     public void endUp() {
-        this.type = "no Tripulada";
+        this.type = "ATV";
         this.power = 0;
         this.speed = 0;
         System.out.println("La nave " + type + " frenó" + "\n" + "power: " + power + "\n" + "speed: " + speed + "\n");
@@ -45,7 +45,7 @@ public class UncrewedSpacecraft extends Spacecraft {
                     break;
 
                 case 5:
-                    System.out.println("Orbitando el planeta Venus");
+                    System.out.println("Orbitando el planeta Júpiter");
                     break;
                 default:
                     incorrectOption();

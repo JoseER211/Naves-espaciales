@@ -1,21 +1,23 @@
-package Java;
+package Java.Naves;
+
+import Java.Spacecraft;
 
 import static Java.Main.Scan;
 import static Java.Main.incorrectOption;
 
-public class atvSpacecraft extends UncrewedSpacecraft {
+public class SpaceShuttle extends Spacecraft {
 
     @Override
     public void startUp() {
-        this.type = "ATV";
-        this.power = 8000;
-        this.speed = 4000;
+        this.type = "vehículo lanzadera";
+        this.power = 366;
+        this.speed = 183;
         System.out.println("La nave " + type + " arrancó" + "\n" + "power: " + power + "\n" + "speed: " + speed + "\n");
     }
 
     @Override
     public void endUp() {
-        this.type = "ATV";
+        this.type = "vehículo lanzadera";
         this.power = 0;
         this.speed = 0;
         System.out.println("La nave " + type + " frenó" + "\n" + "power: " + power + "\n" + "speed: " + speed + "\n");
@@ -23,6 +25,7 @@ public class atvSpacecraft extends UncrewedSpacecraft {
 
     @Override
     public void rotateSpaceCraft() {
+
         Integer direction;
         do {
 
@@ -45,7 +48,7 @@ public class atvSpacecraft extends UncrewedSpacecraft {
                     break;
 
                 case 5:
-                    System.out.println("Orbitando el planeta Júpiter");
+                    System.out.println("Aterrizando en la luna");
                     break;
                 default:
                     incorrectOption();

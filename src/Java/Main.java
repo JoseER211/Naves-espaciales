@@ -23,6 +23,10 @@ public class Main {
         System.out.println("Opción incorrecta");
     }
 
+    public static void landInEarth(){
+        System.out.println("Aterrizando de nuevo en la tierra");
+    }
+
     public static void principalMenu() {
         System.out.println("Bienvenido a la estación de naves espaciales." );
         Integer menuOption;
@@ -92,15 +96,20 @@ public class Main {
     public static void launchedSpacecraft1(){
         System.out.println("¿Qué hará la nave?");
 
-        System.out.println("1. Girar" + "\n" + "2. Frenar");
+        System.out.println("1. Girar" + "\n" + "2. Aterrizar" + "\n" + "3. Frenar");
         Integer menuLaunchShip;
         menuLaunchShip = Scan();
         switch (menuLaunchShip){
             case 1:
                 SpaceShuttle rotateSpaceCraft = new SpaceShuttle();
-                rotateSpaceCraft.turnSpaceCraft();
+                rotateSpaceCraft.rotateSpaceCraft();
+                break;
 
             case 2:
+                landInEarth();
+                break;
+
+            case 3:
                 SpaceShuttle stopSpaceCraft = new SpaceShuttle();
                 stopSpaceCraft.endUp();
                 break;

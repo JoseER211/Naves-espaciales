@@ -19,7 +19,8 @@ public class CrewedSpacecraft extends Spacecraft {
     }
 
     @Override
-    public void turnSpaceCraft() {
+    public void rotateSpaceCraft() {
 
     }
+
 }

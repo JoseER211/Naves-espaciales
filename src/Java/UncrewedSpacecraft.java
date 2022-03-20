@@ -19,7 +19,8 @@ public class UncrewedSpacecraft extends Spacecraft {
     }
 
     @Override
-    public void turnSpaceCraft() {
+    public void rotateSpaceCraft() {
 
     }
+
 }

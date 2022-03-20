@@ -23,16 +23,16 @@ public class Main {
         System.out.println("Opción incorrecta");
     }
 
-    public static void landInEarth(){
+    public static void landInEarth() {
         System.out.println("Aterrizando de nuevo en la tierra");
     }
 
     public static void principalMenu() {
-        System.out.println("Bienvenido a la estación de naves espaciales." );
+        System.out.println("Bienvenido a la estación de naves espaciales.");
         Integer menuOption;
 
         do {
-            System.out.println( "\n" + "¿qué desea hacer hoy?");
+            System.out.println("\n" + "¿qué desea hacer hoy?");
             System.out.println("1. Lanzar naves" + "\n" + "2. Terminar programa");
 
             menuOption = Scan();
@@ -57,9 +57,9 @@ public class Main {
         Integer menuLaunch;
 
         do {
-            System.out.println( "\n" + "¿Cuál nave desea lanzar?");
+            System.out.println("\n" + "¿Cuál nave desea lanzar?");
             System.out.println("1. Vehículo lanzadera" + "\n" + "2. Nave no tripulada" + "\n" +
-                                "3. Nave tripulada" + "\n" + "4. Terminar programa");
+                    "3. Nave tripulada" + "\n" + "4. Terminar programa");
 
             menuLaunch = Scan();
             switch (menuLaunch) {
@@ -93,58 +93,91 @@ public class Main {
 
     }
 
-    public static void launchedSpacecraft1(){
-        System.out.println("¿Qué hará la nave?");
-
-        System.out.println("1. Girar" + "\n" + "2. Aterrizar" + "\n" + "3. Frenar");
+    public static void launchedSpacecraft1() {
         Integer menuLaunchShip;
-        menuLaunchShip = Scan();
-        switch (menuLaunchShip){
-            case 1:
-                SpaceShuttle rotateSpaceCraft = new SpaceShuttle();
-                rotateSpaceCraft.rotateSpaceCraft();
-                break;
+        do {
+            System.out.println("\n" + "¿Qué hará la nave?");
+            System.out.println("1. Girar" + "\n" + "2. Aterrizar" + "\n" + "3. Frenar");
 
-            case 2:
-                landInEarth();
-                break;
+            menuLaunchShip = Scan();
+            switch (menuLaunchShip) {
+                case 1:
+                    SpaceShuttle rotateSpaceCraft = new SpaceShuttle();
+                    rotateSpaceCraft.rotateSpaceCraft();
+                    break;
 
-            case 3:
-                SpaceShuttle stopSpaceCraft = new SpaceShuttle();
-                stopSpaceCraft.endUp();
-                break;
+                case 2:
+                    landInEarth();
+                    break;
 
-        }
+                case 3:
+                    SpaceShuttle stopSpaceCraft = new SpaceShuttle();
+                    stopSpaceCraft.endUp();
+                    break;
+
+                default:
+                    incorrectOption();
+                    break;
+            }
+        } while (menuLaunchShip > 3);
+
     }
 
-    public static void launchedSpacecraft2(){
-        System.out.println("¿Qué hará la nave?");
+    public static void launchedSpacecraft2() {
         Integer menuLaunchShip;
-        menuLaunchShip = Scan();
-        switch (menuLaunchShip){
-            case 1:
-                UncrewedSpacecraft nave = new UncrewedSpacecraft();
-                nave.endUp();
-                break;
+        do {
+            System.out.println("\n" + "¿Qué hará la nave?");
+            System.out.println("1. Girar" + "\n" + "2. Aterrizar" + "\n" + "3. Frenar");
 
-            case 2:
+            menuLaunchShip = Scan();
+            switch (menuLaunchShip) {
+                case 1:
+                    UncrewedSpacecraft rotateSpaceCraft = new UncrewedSpacecraft();
+                    rotateSpaceCraft.rotateSpaceCraft();
+                    break;
 
+                case 2:
+                    landInEarth();
+                    break;
 
-        }
+                case 3:
+                    UncrewedSpacecraft  stopSpaceCraft = new UncrewedSpacecraft ();
+                    stopSpaceCraft.endUp();
+                    break;
+
+                default:
+                    incorrectOption();
+                    break;
+            }
+        } while (menuLaunchShip > 3);
     }
-    public static void launchedSpacecraft3(){
-        System.out.println("¿Qué hará la nave?");
+
+    public static void launchedSpacecraft3() {
         Integer menuLaunchShip;
-        menuLaunchShip = Scan();
-        switch (menuLaunchShip){
-            case 1:
-                CrewedSpacecraft nave = new CrewedSpacecraft();
-                nave.endUp();
-                break;
+        do {
+            System.out.println("\n" + "¿Qué hará la nave?");
+            System.out.println("1. Girar" + "\n" + "2. Aterrizar" + "\n" + "3. Frenar");
 
-            case 2:
+            menuLaunchShip = Scan();
+            switch (menuLaunchShip) {
+                case 1:
+                    CrewedSpacecraft rotateSpaceCraft = new CrewedSpacecraft();
+                    rotateSpaceCraft.rotateSpaceCraft();
+                    break;
 
+                case 2:
+                    landInEarth();
+                    break;
 
-        }
+                case 3:
+                    CrewedSpacecraft stopSpaceCraft = new CrewedSpacecraft();
+                    stopSpaceCraft.endUp();
+                    break;
+
+                default:
+                    incorrectOption();
+                    break;
+            }
+        } while (menuLaunchShip > 3);
     }
 }

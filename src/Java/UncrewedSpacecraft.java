@@ -1,5 +1,8 @@
 package Java;
 
+import static Java.Main.Scan;
+import static Java.Main.incorrectOption;
+
 public class UncrewedSpacecraft extends Spacecraft {
 
     @Override
@@ -20,7 +23,35 @@ public class UncrewedSpacecraft extends Spacecraft {
 
     @Override
     public void rotateSpaceCraft() {
+        Integer direction;
+        do {
 
+            System.out.println("¿En qué dirección girará la nave?");
+            System.out.println("1. Arriba" + "\n" + "2. Abajo" + "\n" + "3. Izquierda" + "\n" +
+                    "4. Derecha" + "\n" + "5. Aterrizar nave");
+            direction = Scan();
+            switch (direction) {
+                case 1:
+                    System.out.println("La nave ha girado hacia arriba" + "\n");
+                    break;
+                case 2:
+                    System.out.println("La nave ha girado hacia abajo" + "\n");
+                    break;
+                case 3:
+                    System.out.println("La nave ha girado hacia la izquierda" + "\n");
+                    break;
+                case 4:
+                    System.out.println("La nave ha girado hacia la derecha" + "\n");
+                    break;
+
+                case 5:
+                    System.out.println("Orbitando el planeta Venus");
+                    break;
+                default:
+                    incorrectOption();
+                    System.out.println("Aterrizando en un planeta extraño...");
+                    break;
+            }
+        } while (direction < 5);
     }
-
 }

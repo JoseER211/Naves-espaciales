@@ -23,16 +23,15 @@ public class SpaceShuttle extends Spacecraft {
 
     @Override
     public void rotateSpaceCraft() {
-        this.power = 732;
-        this.speed = 366;
+
         Integer direction;
         do {
 
             System.out.println("¿En qué dirección girará la nave?");
             System.out.println("1. Arriba" + "\n" + "2. Abajo" + "\n" + "3. Izquierda" + "\n" +
-                                "4. Derecha" + "\n" + "5. Aterrizar nave");
+                    "4. Derecha" + "\n" + "5. Aterrizar nave");
             direction = Scan();
-            switch (direction){
+            switch (direction) {
                 case 1:
                     System.out.println("La nave ha girado hacia arriba" + "\n");
                     break;
@@ -55,7 +54,5 @@ public class SpaceShuttle extends Spacecraft {
                     break;
             }
         } while (direction < 5);
-
     }
-
 }

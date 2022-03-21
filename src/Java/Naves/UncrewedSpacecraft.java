@@ -6,23 +6,30 @@ import static Java.Main.Scan;
 import static Java.Main.incorrectOption;
 
 public class UncrewedSpacecraft extends Spacecraft {
-
+    /**
+     * Hace que la nave arranque
+     */
     @Override
     public void startUp() {
         this.type = "no Tripulada";
         this.power = 8850;
         this.speed = 4425;
-        System.out.println("La nave " + type + " arrancó" + "\n" + "power: " + power + "\n" + "speed: " + speed + "\n");
+        System.out.println( "\n" +"La nave " + type + " arrancó" + "\n" + "power: " + power + "\n" + "speed: " + speed );
     }
-
+    /**
+     * Hace que la nave frene
+     */
     @Override
     public void endUp() {
         this.type = "no Tripulada";
         this.power = 0;
         this.speed = 0;
-        System.out.println("La nave " + type + " frenó" + "\n" + "power: " + power + "\n" + "speed: " + speed + "\n");
+        System.out.println("\n" +"La nave " + type + " arrancó" + "\n" + "power: " + power + "\n" + "speed: " + speed );
     }
-
+    /**
+     * Hace que la nave tenga movilidad en 4 direcciones (arriba, abajo, izquierda o derecha) y pueda aterrizar
+     * en algún sitio.
+     */
     @Override
     public void rotateSpaceCraft() {
         Integer direction;
@@ -47,7 +54,7 @@ public class UncrewedSpacecraft extends Spacecraft {
                     break;
 
                 case 5:
-                    System.out.println("Orbitando el planeta Venus");
+                    System.out.println("Orbitando el planeta Venus...");
                     break;
                 default:
                     incorrectOption();

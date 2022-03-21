@@ -6,23 +6,32 @@ import static Java.Main.Scan;
 import static Java.Main.incorrectOption;
 
 public class SpaceShuttle extends Spacecraft {
-
+    /**
+     * Hace que la nave arranque
+     */
     @Override
     public void startUp() {
         this.type = "vehículo lanzadera";
         this.power = 366;
         this.speed = 183;
-        System.out.println("La nave " + type + " arrancó" + "\n" + "power: " + power + "\n" + "speed: " + speed + "\n");
+        System.out.println("\n" +"La nave " + type + " arrancó" + "\n" + "power: " + power + "\n" + "speed: " + speed );
     }
 
+    /**
+     * Hace que la nave frene
+     */
     @Override
     public void endUp() {
         this.type = "vehículo lanzadera";
         this.power = 0;
         this.speed = 0;
-        System.out.println("La nave " + type + " frenó" + "\n" + "power: " + power + "\n" + "speed: " + speed + "\n");
+        System.out.println("\n" +"La nave " + type + " arrancó" + "\n" + "power: " + power + "\n" + "speed: " + speed );
     }
 
+    /**
+     * Hace que la nave tenga movilidad en 4 direcciones (arriba, abajo, izquierda o derecha) y pueda aterrizar
+     * en algún sitio.
+     */
     @Override
     public void rotateSpaceCraft() {
 
@@ -46,9 +55,8 @@ public class SpaceShuttle extends Spacecraft {
                 case 4:
                     System.out.println("La nave ha girado hacia la derecha" + "\n");
                     break;
-
                 case 5:
-                    System.out.println("Aterrizando en la luna");
+                    System.out.println("Aterrizando en la luna...");
                     break;
                 default:
                     incorrectOption();

@@ -14,24 +14,40 @@ public class Main {
 
     }
 
+    /**
+     * Escanea un dato por teclado
+     * @return El dato escaneado
+     */
     public static Integer Scan() {
         Scanner data = new Scanner(System.in);
         Integer option = data.nextInt();
         return option;
     }
 
+    /**
+     * Termina el programa
+     */
     public static void programOff() {
         System.out.println("Se terminó el programa");
     }
 
+    /**
+     * Manda un mensaje de opción incorrecta
+     */
     public static void incorrectOption() {
         System.out.println("Opción incorrecta");
     }
 
+    /**
+     * Hace que las naves aterricen por defecto en el planeta tierra
+     */
     public static void landInEarth() {
         System.out.println("Aterrizando de nuevo en el planeta tierra");
     }
 
+    /**
+     * Menú principal para decidir lanzar las naves
+     */
     public static void principalMenu() {
         System.out.println("Bienvenido a la estación de naves espaciales.");
         Integer menuOption;
@@ -58,6 +74,9 @@ public class Main {
 
     }
 
+    /**
+     * Menú para decidir que tipo de nave lanzar
+     */
     public static void launchSpacecrafts() {
         Integer menuLaunch;
 
@@ -104,6 +123,9 @@ public class Main {
 
     }
 
+    /**
+     * Menú para decidir las acciones de la nave
+     */
     public static void launchedSpacecraft1() {
         Integer menuLaunchShip;
         do {

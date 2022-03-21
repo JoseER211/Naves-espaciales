@@ -1,9 +1,9 @@
 package Java;
 
-import Java.Naves.CrewedSpacecraft;
-import Java.Naves.SpaceShuttle;
-import Java.Naves.UncrewedSpacecraft;
-import Java.Naves.atvSpacecraft;
+import Java.Spacecrafts.CrewedSpacecraft;
+import Java.Spacecrafts.SpaceShuttle;
+import Java.Spacecrafts.UncrewedSpacecraft;
+import Java.Spacecrafts.atvSpacecraft;
 
 import java.util.Scanner;
 

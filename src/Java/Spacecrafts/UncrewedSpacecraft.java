@@ -1,4 +1,4 @@
-package Java.Naves;
+package Java.Spacecrafts;
 
 import Java.Spacecraft;
 

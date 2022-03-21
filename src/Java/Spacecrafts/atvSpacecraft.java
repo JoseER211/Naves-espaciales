@@ -1,19 +1,17 @@
-package Java.Naves;
-
-import Java.Spacecraft;
+package Java.Spacecrafts;
 
 import static Java.Main.Scan;
 import static Java.Main.incorrectOption;
 
-public class CrewedSpacecraft extends Spacecraft {
+public class atvSpacecraft extends UncrewedSpacecraft {
     /**
      * Hace que la nave arranque
      */
     @Override
     public void startUp() {
-        this.type = "tripulada";
-        this.power = 1330;
-        this.speed = 665;
+        this.type = "ATV";
+        this.power = 8000;
+        this.speed = 4000;
         System.out.println("\n" +"La nave " + type + " arrancó" + "\n" + "power: " + power + "\n" + "speed: " + speed );
     }
     /**
@@ -21,7 +19,7 @@ public class CrewedSpacecraft extends Spacecraft {
      */
     @Override
     public void endUp() {
-        this.type = "tripulada";
+        this.type = "ATV";
         this.power = 0;
         this.speed = 0;
         System.out.println("\n" +"La nave " + type + " arrancó" + "\n" + "power: " + power + "\n" + "speed: " + speed );
@@ -54,7 +52,7 @@ public class CrewedSpacecraft extends Spacecraft {
                     break;
 
                 case 5:
-                    System.out.println("Aterrizando en el planeta Marte...");
+                    System.out.println("Orbitando el planeta Júpiter...");
                     break;
                 default:
                     incorrectOption();

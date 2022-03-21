@@ -1,35 +1,40 @@
-package Java.Naves;
+package Java.Spacecrafts;
+
+import Java.Spacecraft;
 
 import static Java.Main.Scan;
 import static Java.Main.incorrectOption;
 
-public class atvSpacecraft extends UncrewedSpacecraft {
+public class SpaceShuttle extends Spacecraft {
     /**
      * Hace que la nave arranque
      */
     @Override
     public void startUp() {
-        this.type = "ATV";
-        this.power = 8000;
-        this.speed = 4000;
+        this.type = "vehículo lanzadera";
+        this.power = 366;
+        this.speed = 183;
         System.out.println("\n" +"La nave " + type + " arrancó" + "\n" + "power: " + power + "\n" + "speed: " + speed );
     }
+
     /**
      * Hace que la nave frene
      */
     @Override
     public void endUp() {
-        this.type = "ATV";
+        this.type = "vehículo lanzadera";
         this.power = 0;
         this.speed = 0;
         System.out.println("\n" +"La nave " + type + " arrancó" + "\n" + "power: " + power + "\n" + "speed: " + speed );
     }
+
     /**
      * Hace que la nave tenga movilidad en 4 direcciones (arriba, abajo, izquierda o derecha) y pueda aterrizar
      * en algún sitio.
      */
     @Override
     public void rotateSpaceCraft() {
+
         Integer direction;
         do {
 
@@ -50,9 +55,8 @@ public class atvSpacecraft extends UncrewedSpacecraft {
                 case 4:
                     System.out.println("La nave ha girado hacia la derecha" + "\n");
                     break;
-
                 case 5:
-                    System.out.println("Orbitando el planeta Júpiter...");
+                    System.out.println("Aterrizando en la luna...");
                     break;
                 default:
                     incorrectOption();

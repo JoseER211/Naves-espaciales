@@ -52,7 +52,7 @@ public class atvSpacecraft extends UncrewedSpacecraft {
                     break;
 
                 case 5:
-                    System.out.println("Orbitando el planeta Júpiter...");
+                    System.out.println("Aterrizando en " + random() + "...");
                     break;
                 default:
                     incorrectOption();

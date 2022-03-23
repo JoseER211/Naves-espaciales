@@ -2,6 +2,8 @@ package Java.Spacecrafts;
 
 import Java.Spacecraft;
 
+import java.util.Random;
+
 import static Java.Main.Scan;
 import static Java.Main.incorrectOption;
 
@@ -26,6 +28,18 @@ public class UncrewedSpacecraft extends Spacecraft {
         this.speed = 0;
         System.out.println("\n" +"La nave " + type + " arrancó" + "\n" + "power: " + power + "\n" + "speed: " + speed );
     }
+
+    /**
+     * Genera una valor aleatorio de la lista planetas
+     * @return valor aleatorio de la lista planetas
+     */
+    @Override
+    public String random() {
+        Random random = new Random();
+        String planeta = planetas.get(random.nextInt(planetas.size()));
+        return planeta;
+    }
+
     /**
      * Hace que la nave tenga movilidad en 4 direcciones (arriba, abajo, izquierda o derecha) y pueda aterrizar
      * en algún sitio.
@@ -54,7 +68,7 @@ public class UncrewedSpacecraft extends Spacecraft {
                     break;
 
                 case 5:
-                    System.out.println("Orbitando el planeta Venus...");
+                    System.out.println("Aterrizando en " + random() + "...");
                     break;
                 default:
                     incorrectOption();

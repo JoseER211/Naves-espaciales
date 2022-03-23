@@ -2,6 +2,8 @@ package Java.Spacecrafts;
 
 import Java.Spacecraft;
 
+import java.util.Random;
+
 import static Java.Main.Scan;
 import static Java.Main.incorrectOption;
 
@@ -26,6 +28,17 @@ public class SpaceShuttle extends Spacecraft {
         this.power = 0;
         this.speed = 0;
         System.out.println("\n" +"La nave " + type + " arrancó" + "\n" + "power: " + power + "\n" + "speed: " + speed );
+    }
+
+    /**
+     * Genera una valor aleatorio de la lista planetas
+     * @return valor aleatorio de la lista planetas
+     */
+    @Override
+    public String random() {
+        Random random = new Random();
+        String planeta = planetas.get(random.nextInt(planetas.size()));
+        return planeta;
     }
 
     /**
@@ -56,7 +69,7 @@ public class SpaceShuttle extends Spacecraft {
                     System.out.println("La nave ha girado hacia la derecha" + "\n");
                     break;
                 case 5:
-                    System.out.println("Aterrizando en la luna...");
+                    System.out.println("Aterrizando en " + random() + "..." );
                     break;
                 default:
                     incorrectOption();
